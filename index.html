@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <!-- Moralis SDK code -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="https://mukpijvm7mmy.moralis.io:2053/server"></script>
+    <script src="HGI9vAYmeGMCoJT7bBfQZkji5APpyquAaESth9wk"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Dapp using Moralis</h1>
+        <hr class="my-4">
+      </div>
+    </div>
+    <div style="margin-right: 60; padding: 45;">
+
+      <!-- User Authetication -->
+      <h2>MetaMask</h2>
+      <button id="btn-login" >Login Metamask</button> <br />
+      <button id="btn-logout" > Logout Metamask</button> <br />
+      <button id="btn-get-stats" > Refresh Stats</button>
+      <hr />
+      <h2>Using email & password</h2>
+      <input type="email" name="email" id="email" placeholder="email">
+      <input type="password" name="password" id="password" placeholder="password">
+      <br />
+      <button id="signup" > Sign Up</button>
+      <button id="login" > Login</button>
+      <hr />
+
+
+      <!-- Objects.js -->
+      <h2>Database Objects</h2>
+      <button id="btn-init-object" > Initialize Object </button> <hr />
+      <button id="btn-get-object" > log first object </button> <hr />
+      
+      <input type="number" name="score" id="score" placeholder="score">
+      <input type="text" name="name" id="name" placeholder="name">
+      <button id="btn-save-object" > Save an Object </button>
+      <hr />
+      <button id="btn-ret-object" > Retrieve an Object </button>
+    
+      <!-- Queries -->
+      <hr />
+      <h2>Queries: Basic</h2>
+      <button id="getall" > Show All Monsters</button> 
+      
+      <hr />
+      <h2>Queries: Constraint</h2>
+      <button id="le" > Show monster health less than 50</button>  <br />
+      <button id="gr" > Show monster health greater than 50</button>  <br />
+      <button id="ge" > Show monster health >= 50</button> <br /> 
+      <button id="gem" > Show Specified monsters</button>  
+
+      <hr />
+      <h2>Queries: Pagination</h2>
+      <button id="gam" > Show all Monsters with greater health on top</button>  <br/>
+      <button id="gtm" > Show 10 Monsters</button>  
+
+     
+      <hr />
+      <h2>Queries: Relational</h2>
+      <button id="gcm" > Show centl Monsters</button> <br />
+      <button id="gb" > Get buddies</button>  
+
+      <hr />
+      <h2>Queries: Compound</h2>
+      <button id="gpm" > Show perfect match (or)</button> 
+      <button id="gapm" > Show perfect match (and)</button> 
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./objects.js"></script>
+    <script type="text/javascript" src="./queries.js"></script>
+
+  </body>
+</html>
