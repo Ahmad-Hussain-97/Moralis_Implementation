@@ -11,7 +11,10 @@ defineNewMonster = async (name, health, strength) => {
     return monster;
 }
 //await defineNewMonster("kain",23,43);
-
+init = async () =>{
+    //getMonsters();
+   // getGreaterHealthMonsters();
+}
 getAllMonsters = async () =>{
     const MonsterCreature = Moralis.Object.extend("Monster");
     const query= new Moralis.Query(MonsterCreature);
@@ -195,6 +198,25 @@ getaperfectmatch= async () => {
 
 
 
+
+//=================================================================
+//calling the cloud function, at page load init(), to get all the monsters from the existing monster table
+//=================================================================
+
+getMonsters = async () => {
+    const monsters = await Moralis.Cloud.run("getMonsters");
+    alert(monsters.length +" monsters have been retrieved!");
+    console.log(monsters);
+}
+
+//
+getGreaterHealthMonsters = async () => {
+    const monsters = await Moralis.Cloud.run("getGreaterHealthMonsters");
+    alert(monsters.length +" monsters have been retrieved!");
+    console.log(monsters);
+}
+
+
 document.getElementById("getall").onclick=getAllMonsters;
 document.getElementById("gr").onclick=getGr;
 document.getElementById("ge").onclick=getGe;
@@ -207,4 +229,9 @@ document.getElementById("gb").onclick=getbuddy; //relational
 document.getElementById("gpm").onclick=getperfectmatch;
 document.getElementById("gapm").onclick=getaperfectmatch;
 
+//===============
 
+document.getElementById("gmc").onclick=getMonsters;
+document.getElementById("grmc").onclick=getGreaterHealthMonsters;
+
+init();

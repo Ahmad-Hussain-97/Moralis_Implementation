@@ -94,3 +94,5 @@ document.getElementById("btn-logout").onclick = logOut;
 document.getElementById("btn-get-stats").onclick = getStats;
 document.getElementById("signup").onclick = ()=> signup(document.getElementById("email").value, document.getElementById("password").value);
 document.getElementById("login").onclick = ()=> mlogin(document.getElementById("email").value, document.getElementById("password").value);
+
+
